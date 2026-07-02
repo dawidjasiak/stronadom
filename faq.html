@@ -42,4 +42,227 @@
                 <div class="d-flex justify-content-center">
                 </div>
             </div>
+            @ -1,222 +0,0 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>FAQ Accordion</title>
+
+<style>
+body{
+    margin:0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    background: linear-gradient(135deg, #f6f8ff, #eef2ff);
+    padding:40px;
+}
+
+.wrapper{
+    max-width:800px;
+    margin:auto;
+}
+
+.title{
+    font-size:32px;
+    font-weight:800;
+    margin-bottom:20px;
+    color:#1f2937;
+}
+
+/* CARD */
+.faq-item{
+    background:#fff;
+    border-radius:16px;
+    margin-bottom:14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.06);
+    overflow:hidden;
+    border:1px solid rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.faq-item:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0,0,0,.09);
+}
+
+/* QUESTION */
+.faq-question{
+    width:100%;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    background:transparent;
+    border:none;
+    font-size:17px;
+    font-weight:600;
+    color:#111827;
+}
+
+.faq-question span.text{
+    text-align:left;
+}
+
+.chevron{
+    width:22px;
+    height:22px;
+    transition:transform .3s ease;
+    color:#4f46e5;
+}
+
+/* ANSWER */
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease, padding .35s ease;
+    padding:0 20px;
+    color:#4b5563;
+    font-size:15px;
+    line-height:1.6;
+}
+
+/* ACTIVE STATE */
+.faq-item.active .faq-answer{
+    max-height:200px;
+    padding:0 20px 18px;
+}
+
+.faq-item.active .chevron{
+    transform: rotate(180deg);
+}
+
+/* small accent line */
+.faq-answer::before{
+    content:"";
+    display:block;
+    height:1px;
+    background:#eee;
+    margin-bottom:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <div class="title">Najczęstsze pytania (FAQ)</div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            <span class="text">Ile m² ma działka?</span>
+            <svg class="chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/>
+            </svg>
+        </button>
+        <div class="faq-answer">
+            Działka ma powierzchnię <strong>xxx m²</strong>.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            <span class="text">Jaki jest rok budowy?</span>
+            <svg class="chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/>
+            </svg>
+        </button>
+        <div class="faq-answer">
+           Budynek został wybudowany <strong>w 199x</strong> roku.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            <span class="text">Jaka jest cena?</span>
+            <svg class="chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/>
+            </svg>
+        </button>
+        <div class="faq-answer">
+            <strong>Skontaktuj się z nami w celu umówienia szczegółów.</strong>.
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <button class="faq-question">
+            <span class="text">Czy nieruchomość posiada podłączenie do internetu?</span>
+            <svg class="chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/>
+            </svg>
+        </button>
+        <div class="faq-answer">
+            <strong>Nie.</strong>, ale istnieje możliwość podłączenia internetu radiowego np. Orange, które kiedyś było zainstalowane. Nieruchomość posiada bardzo dobre połączenie 5G, z którego aktualnie korzystamy.
+        </div>
+    </div>
+
+        <div class="faq-item">
+        <button class="faq-question">
+            <span class="text">Jak się z Państwem skontaktować?</span>
+            <svg class="chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/>
+            </svg>
+        </button>
+        <div class="faq-answer">
+            Informacje, o kontakcie znajdują się na<strong> samym dole strony głównej.</strong>.
+        </div>
+    </div>
+
+        <div class="faq-item">
+        <button class="faq-question">
+            <span class="text">Jaki biznes można prowadzić w lokalu, który jest częścią domu?</span>
+            <svg class="chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/>
+            </svg>
+        </button>
+        <div class="faq-answer">
+            Aktualnie jest prowadzona <strong>gastronomia,</strong>, ale nic nie stoi na przeszkodzie, by przearanżować lokal w piekarnię, cukiernię, recepcję, rejestrację lub inne pochodne.
+        </div>
+    </div>
+
+        <div class="faq-item">
+        <button class="faq-question">
+            <span class="text">Ile samochodów zmieści się na podwórku?</span>
+            <svg class="chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/>
+            </svg>
+        </button>
+        <div class="faq-answer">
+            Nie licząc dwóch miejsc w zadaszonym garażu, myślę, że <strong>około 5 samochodów osobowych.</strong> Oczywiście można zaaranżować podwórko na swój sposób, żeby zmieścić ich więcej.
+        </div>
+    </div>
+
+        <div class="faq-item">
+        <button class="faq-question">
+            <span class="text">Czy istnieje wgląd do planów budynku, księgi wieczystej i rachunków z ostatnich miesięcy?</span>
+            <svg class="chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"/>
+            </svg>
+        </button>
+        <div class="faq-answer">
+            <strong>Tak.</strong> Z przyjemnością ukażę Państwu wszystkie dokumenty, na umówionym wcześniej spotkaniu.
+        </div>
+    </div>
+
+    
+</div>
+
+<script>
+const items = document.querySelectorAll(".faq-item");
+
+items.forEach(item => {
+    item.querySelector(".faq-question").addEventListener("click", () => {
+
+        items.forEach(el => {
+            if(el !== item) el.classList.remove("active");
+        });
+
+        item.classList.toggle("active");
+    });
+});
+</script>
+
+</body>
+</html>
         </header>
