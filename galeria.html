@@ -15,7 +15,98 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-    </head>
+
+        <title>FAQ Accordion</title>
+
+<style>
+    
+.wrapper{
+    max-width:800px;
+    margin:120px auto 40px;
+    padding:0 20px;
+}
+
+.title{
+    font-size:32px;
+    font-weight:800;
+    margin-bottom:20px;
+    color:#1f2937;
+}
+
+/* CARD */
+.faq-item{
+    background:#fff;
+    border-radius:16px;
+    -bottom:14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.06);
+    overflow:hidden;
+    border:1px solid rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.faq-item:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0,0,0,.09);
+}
+
+/* QUESTION */
+.faq-question{
+    width:100%;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    background:transparent;
+    border:none;
+    font-size:17px;
+    font-weight:600;
+    color:#111827;
+}
+
+.faq-question span.text{
+    text-align:left;
+}
+
+.chevron{
+    width:22px;
+    height:22px;
+    transition:transform .3s ease;
+    color:#4f46e5;
+}
+
+/* ANSWER */
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease, padding .35s ease;
+    padding:0 20px;
+    color:#4b5563;
+    font-size:15px;
+    line-height:1.6;
+}
+
+/* ACTIVE STATE */
+.faq-item.active .faq-answer{
+    max-height:200px;
+    padding:0 20px 18px;
+}
+
+.faq-item.active .chevron{
+    transform: rotate(180deg);
+}
+
+/* small accent line */
+.faq-answer::before{
+    content:"";
+    display:block;
+    height:1px;
+    background:#eee;
+    -bottom:12px;
+}
+</style>
+
+</head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
