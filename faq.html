@@ -19,16 +19,11 @@
         <title>FAQ Accordion</title>
 
 <style>
-body{
-    margin:0;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
-    background: linear-gradient(135deg, #f6f8ff, #eef2ff);
-    padding:40px;
-}
-
+    
 .wrapper{
     max-width:800px;
     margin:auto;
+    padding:40px;
 }
 
 .title{
@@ -132,8 +127,7 @@ body{
                 </div>
             </div>
         </nav>
-    </body>
-<body>
+        
 <div class="wrapper">
 
     <div class="title">Najczęstsze pytania (FAQ)</div>
@@ -173,7 +167,8 @@ body{
             <strong>Skontaktuj się z nami w celu umówienia szczegółów.</strong>.
         </div>
     </div>
-    
+</div>
+        
     <div class="faq-item">
         <button class="faq-question">
             <span class="text">Czy nieruchomość posiada podłączenie do internetu?</span>
@@ -235,7 +230,7 @@ body{
     </div>
 
     
-</div>
+
 
 <script>
 const items = document.querySelectorAll(".faq-item");
@@ -251,6 +246,10 @@ items.forEach(item => {
     });
 });
 </script>
-
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    
 </body>
 </html>
