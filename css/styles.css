@@ -11119,7 +11119,26 @@ body {
 .about-section p {
   margin-bottom: 5rem;
 }
+.intro-section{
+    background:#fff;
+    color:#333;
+}
 
+.intro-section h2{
+    font-weight:700;
+    margin-bottom:30px;
+}
+
+.intro-section p{
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+.intro-section .lead{
+    font-size:1.3rem;
+    color:#555;
+    font-weight:500;
+}
 .projects-section {
   padding: 10rem 0;
 }
