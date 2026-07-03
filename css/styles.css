@@ -11301,7 +11301,44 @@ body {
 .contact-section .social a:active {
   color: #fff;
 }
+/* ===== Atuty inwestycji ===== */
 
+.features-section{
+    background:#f8f9fa;
+}
+
+.feature-card{
+    background:#fff;
+    border-radius:18px;
+    padding:35px 25px;
+    text-align:center;
+    height:100%;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.feature-icon{
+    font-size:42px;
+    color:#64a19d;
+    margin-bottom:20px;
+}
+
+.feature-card h4{
+    font-size:1.3rem;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.feature-card p{
+    color:#666;
+    margin:0;
+    line-height:1.6;
+}
 .footer {
   padding: 5rem 0;
 }
