@@ -11101,9 +11101,10 @@ body {
     padding: 0;
   }
   .masthead h1, .masthead .h1 {
-    font-size: 6.5rem;
-    line-height: 6.5rem;
-    letter-spacing: 0.8rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.1rem;
+
   }
   .masthead h2, .masthead .h2 {
     max-width: 30rem;
@@ -11139,6 +11140,33 @@ body {
   .projects-section .project-text {
     padding: 5rem;
   }
+}
+/* Poprawki dla telefonów */
+@media (max-width: 767px) {
+
+  .masthead {
+    min-height: 100vh;
+    padding: 8rem 0 4rem;
+  }
+
+  .masthead h1 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .masthead h2 {
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .masthead .btn {
+    white-space: normal;
+    width: 100%;
+    max-width: 350px;
+  }
+
 }
 
 .signup-section {
