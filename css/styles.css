@@ -11182,6 +11182,63 @@ body {
 .contact-section .social {
   margin-top: 5rem;
 }
+.gallery-section{
+    padding:80px 0;
+    background:#f8f9fa;
+}
+
+.gallery-category{
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    overflow:hidden;
+    margin-bottom:25px;
+}
+
+.gallery-toggle{
+    width:100%;
+    padding:20px 25px;
+    border:none;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:20px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.gallery-toggle i{
+    transition:.3s;
+}
+
+.gallery-category.active .gallery-toggle i{
+    transform:rotate(180deg);
+}
+
+.gallery-content{
+    display:none;
+    padding:20px;
+    gap:15px;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+}
+
+.gallery-category.active .gallery-content{
+    display:grid;
+}
+
+.gallery-content img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:.25s;
+    cursor:pointer;
+}
+
+.gallery-content img:hover{
+    transform:scale(1.03);
+}
 .contact-section .social a {
   text-align: center;
   height: 3rem;
