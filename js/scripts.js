@@ -9,19 +9,24 @@
 
 window.addEventListener('DOMContentLoaded', event => {
 
-    // Navbar shrink function
-    var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
+var navbarShrink = function () {
+    const navbarCollapsible = document.body.querySelector('#mainNav');
+    if (!navbarCollapsible) {
+        return;
+    }
 
-    };
+    // Na faq.html navbar ma być zawsze zwinięty
+    if (window.location.pathname.endsWith("faq.html")) {
+        navbarCollapsible.classList.add('navbar-shrink');
+        return;
+    }
+
+    if (window.scrollY === 0) {
+        navbarCollapsible.classList.remove('navbar-shrink');
+    } else {
+        navbarCollapsible.classList.add('navbar-shrink');
+    }
+};
 
     // Shrink the navbar 
     navbarShrink();
