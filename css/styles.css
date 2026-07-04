@@ -10980,6 +10980,7 @@ body {
 }
 
 #mainNav {
+  z-index: 9999;
   min-height: 3.5rem;
   background-color: #fff;
 }
