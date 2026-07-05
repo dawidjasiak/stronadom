@@ -11739,6 +11739,10 @@ display:none;
     line-height:1.8;
 }
 
+.location-box{
+    padding-top:40px;
+}
+
 .location-list{
     list-style:none;
     padding:0;
