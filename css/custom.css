@@ -1,0 +1,9 @@
+@media(max-width:768px){
+    .owner-letter{
+        padding:34px 24px;
+    }
+
+    .owner-letter p{
+        font-size:1rem;
+    }
+}
