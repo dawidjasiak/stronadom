@@ -11120,6 +11120,7 @@ body {
   margin-bottom: 5rem;
 }
 .intro-section{
+    padding-top: 100px 0;
     background:#fff;
     color:#333;
 }
