@@ -11952,81 +11952,41 @@ display:none;
 
 }
 .owner-section{
-
     background:#fff;
-
 }
 
 .owner-box{
-
-    max-width:950px;
-    margin:auto;
-
-    display:flex;
-    gap:40px;
-
-    align-items:flex-start;
-
+    max-width:900px;
+    margin:0 auto;
+    padding:45px;
+    border-left:5px solid #64a19d;
+    background:#f8f9fa;
+    border-radius:18px;
 }
 
-.owner-quote{
-
-    font-size:8rem;
-
-    color:#e5e5e5;
-
-    line-height:1;
-
-    font-family:Georgia,serif;
-
-}
-
-.owner-content h2{
-
-    margin-bottom:30px;
-
+.owner-box h2{
     font-weight:700;
-
+    margin-bottom:25px;
 }
 
-.owner-content p{
-
-    font-size:1.15rem;
-
-    line-height:2;
-
+.owner-box p{
+    font-size:1.1rem;
+    line-height:1.9;
     color:#555;
-
 }
 
 .owner-sign{
-
-    margin-top:35px;
-
+    margin-top:30px;
     font-weight:700;
-
     color:#64a19d;
-
 }
 
 @media(max-width:768px){
+    .owner-box{
+        padding:28px 22px;
+    }
 
-.owner-box{
-
-display:block;
-
-}
-
-.owner-quote{
-
-display:none;
-
-}
-
-.owner-content p{
-
-font-size:1.05rem;
-
-}
-
+    .owner-box p{
+        font-size:1rem;
+    }
 }
