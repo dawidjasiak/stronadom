@@ -11721,31 +11721,12 @@ display:none;
 
 }
 
-/* ===========================
-   Atuty lokalizacji
-=========================== */
+/* =========================
+   lokalizacja miejsca
+========================= */
 
 .location-section{
     background:#fff;
-}
-
-.location-image{
-    width:100%;
-    border-radius:24px;
-    box-shadow:0 20px 45px rgba(0,0,0,.18);
-    transition:.3s;
-}
-
-.location-image:hover{
-    transform:scale(1.02);
-    box-shadow:0 25px 55px rgba(0,0,0,.25);
-}
-
-.location-image-caption{
-    text-align:center;
-    margin-top:12px;
-    color:#777;
-    font-size:.95rem;
 }
 
 .location-box h3{
@@ -11778,10 +11759,10 @@ display:none;
 }
 
 .distance-box{
-    margin-top:30px;
-    padding:24px;
-    border-radius:18px;
+    padding:32px;
+    border-radius:22px;
     background:#f8f9fa;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
 
 .distance-box h4{
@@ -11793,7 +11774,7 @@ display:none;
     display:flex;
     justify-content:space-between;
     gap:20px;
-    padding:14px 0;
+    padding:16px 0;
     border-bottom:1px solid rgba(0,0,0,.08);
 }
 
@@ -11812,16 +11793,6 @@ display:none;
     text-align:right;
 }
 
-.location-note{
-    margin-top:25px;
-    padding:20px 24px;
-    border-left:5px solid #64a19d;
-    background:#f8f9fa;
-    color:#444;
-    font-weight:600;
-    line-height:1.6;
-}
-
 @media(max-width:768px){
     .distance-item{
         flex-direction:column;
@@ -11831,4 +11802,32 @@ display:none;
     .distance-item span{
         text-align:left;
     }
+}
+.location-image{
+    width:100%;
+    border-radius:24px;
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+    transition:.3s;
+}
+
+.location-image:hover{
+    transform:scale(1.02);
+    box-shadow:0 25px 55px rgba(0,0,0,.25);
+}
+
+.location-image-caption{
+    text-align:center;
+    margin-top:12px;
+    color:#777;
+    font-size:.95rem;
+}
+
+.location-note{
+    margin-top:25px;
+    padding:20px 24px;
+    border-left:5px solid #64a19d;
+    background:#f8f9fa;
+    color:#444;
+    font-weight:600;
+    line-height:1.6;
 }
