@@ -69,13 +69,3 @@
     font-weight:800;
     margin-right:12px;
 }
-
-@media(max-width:768px){
-    .quick-summary-box{
-        padding:38px 24px;
-    }
-
-    .quick-summary-list{
-        grid-template-columns:1fr;
-    }
-}
