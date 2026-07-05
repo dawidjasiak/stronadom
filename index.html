@@ -424,7 +424,7 @@
 
             <div class="col-6 col-lg-4">
                 <div class="number-item">
-                    <h1>500</h1>
+                <h1 class="counter" data-target="500">0</h1>
                     <span>m²</span>
                     <p>Powierzchnia budynku</p>
                 </div>
@@ -432,7 +432,7 @@
 
             <div class="col-6 col-lg-4">
                 <div class="number-item">
-                    <h1>3</h1>
+                    <h1 class="counter" data-target="3">0</h1>
                     <span>kondygnacje</span>
                     <p>Nad poziomem gruntu</p>
                 </div>
@@ -440,7 +440,7 @@
 
             <div class="col-6 col-lg-4">
                 <div class="number-item">
-                    <h1>200</h1>
+                    <h1 class="counter" data-target="200">0</h1>
                     <span>m² piwnicy</span>
                     <p>Dodatkowa powierzchnia</p>
                 </div>
@@ -448,7 +448,7 @@
 
             <div class="col-6 col-lg-4">
                 <div class="number-item">
-                    <h1>7+</h1>
+                    <h1 class="counter" data-target="7">0</h1>
                     <span>miejsc</span>
                     <p>Parking na posesji</p>
                 </div>
@@ -456,7 +456,7 @@
 
             <div class="col-6 col-lg-4">
                 <div class="number-item">
-                    <h1>XXX</h1>
+                    <h1 class="counter" data-target="900">0</h1>
                     <span>m² działki</span>
                     <p>Do uzupełnienia</p>
                 </div>
@@ -464,7 +464,7 @@
 
             <div class="col-6 col-lg-4">
                 <div class="number-item">
-                    <h1>30+</h1>
+                    <h1 class="counter-plus" data-target="30">0+</h1>
                     <span>lat</span>
                     <p>Historii działalności</p>
                 </div>
@@ -621,5 +621,65 @@
                     selector: '.glightbox'
                 });
             </script>
+
+
+<script>
+
+const counters = document.querySelectorAll('.counter, .counter-plus');
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (!entry.isIntersecting) return;
+
+        const counter = entry.target;
+        const target = +counter.dataset.target;
+
+        let current = 0;
+
+        const speed = target / 60;
+
+        const update = () => {
+
+            current += speed;
+
+            if(current < target){
+
+                if(counter.classList.contains("counter-plus")){
+                    counter.innerText = Math.ceil(current) + "+";
+                }else{
+                    counter.innerText = Math.ceil(current);
+                }
+
+                requestAnimationFrame(update);
+
+            }else{
+
+                if(counter.classList.contains("counter-plus")){
+                    counter.innerText = target + "+";
+                }else{
+                    counter.innerText = target;
+                }
+
+            }
+
+        }
+
+        update();
+
+        observer.unobserve(counter);
+
+    });
+
+}, {
+    threshold:0.4
+});
+
+counters.forEach(counter=>observer.observe(counter));
+
+</script>
+
+
     </body>
 </html>
