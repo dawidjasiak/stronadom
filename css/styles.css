@@ -11721,3 +11721,65 @@ display:none;
 
 }
 
+/* ===========================
+   Atuty lokalizacji
+=========================== */
+
+.location-section{
+    background:#fff;
+}
+
+.map-wrapper{
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.location-info h3{
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.location-info p{
+    color:#555;
+    line-height:1.8;
+}
+
+.location-list{
+    list-style:none;
+    padding:0;
+    margin:30px 0;
+}
+
+.location-list li{
+    margin-bottom:16px;
+    font-size:1.05rem;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+}
+
+.location-list i{
+    color:#64a19d;
+    margin-right:12px;
+}
+
+.location-note{
+    margin-top:25px;
+    padding:20px 24px;
+    border-left:5px solid #64a19d;
+    background:#f8f9fa;
+    color:#444;
+    font-weight:600;
+    line-height:1.6;
+}
+
+@media(max-width:768px){
+    .map-wrapper iframe{
+        height:320px;
+    }
+
+    .location-info{
+        text-align:left;
+    }
+}
