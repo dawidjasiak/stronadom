@@ -625,58 +625,59 @@
 
 <script>
 
-const counters = document.querySelectorAll('.counter, .counter-plus');
+const counters = document.querySelectorAll(".counter, .counter-plus");
 
-const observer = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
         if (!entry.isIntersecting) return;
 
         const counter = entry.target;
-        const target = +counter.dataset.target;
+        const target = Number(counter.dataset.target);
 
         let current = 0;
 
-        const speed = target / 60;
+        const increment = target / 80;
 
-        const update = () => {
+        function updateCounter() {
 
-            current += speed;
+            current += increment;
 
-            if(current < target){
+            if (current < target) {
 
                 if(counter.classList.contains("counter-plus")){
-                    counter.innerText = Math.ceil(current) + "+";
+                    counter.textContent = Math.ceil(current) + "+";
                 }else{
-                    counter.innerText = Math.ceil(current);
+                    counter.textContent = Math.ceil(current);
                 }
 
-                requestAnimationFrame(update);
+                requestAnimationFrame(updateCounter);
 
-            }else{
+            } else {
 
                 if(counter.classList.contains("counter-plus")){
-                    counter.innerText = target + "+";
+                    counter.textContent = target + "+";
                 }else{
-                    counter.innerText = target;
+                    counter.textContent = target;
                 }
 
             }
-
         }
 
-        update();
+        updateCounter();
 
         observer.unobserve(counter);
 
     });
 
 }, {
-    threshold:0.4
+
+    threshold: 0.75
+
 });
 
-counters.forEach(counter=>observer.observe(counter));
+counters.forEach(counter => observer.observe(counter));
 
 </script>
 
