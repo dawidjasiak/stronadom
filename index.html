@@ -408,6 +408,135 @@
 </section>
 <!--koniec mozliwych zastosowan-->
 
+
+<!-- Dziedzictwo miejsca -->
+
+<section class="history-section py-5">
+
+<div class="container px-4 px-lg-5">
+
+<div class="text-center mb-5">
+
+<h2>Dziedzictwo miejsca</h2>
+
+<p class="lead text-muted">
+
+Nie kupujesz wyłącznie budynku.
+Przejmujesz miejsce, które od dziesięcioleci
+funkcjonuje jako przestrzeń prowadzenia działalności gospodarczej.
+
+</p>
+
+</div>
+
+
+<div class="history-wrapper">
+
+<div class="history-line"></div>
+
+
+<div class="history-item">
+
+<div class="history-dot"></div>
+
+<div class="history-card">
+
+<h4>1978</h4>
+
+<p>Powstanie budynku.</p>
+
+</div>
+
+</div>
+
+
+<div class="history-item">
+
+<div class="history-dot"></div>
+
+<div class="history-card">
+
+<h4>1986</h4>
+
+<p>Rozpoczęcie pierwszej działalności handlowej.</p>
+
+</div>
+
+</div>
+
+
+<div class="history-item">
+
+<div class="history-dot"></div>
+
+<div class="history-card">
+
+<h4>1998</h4>
+
+<p>Rozbudowa oraz rozwój obiektu.</p>
+
+</div>
+
+</div>
+
+
+<div class="history-item">
+
+<div class="history-dot"></div>
+
+<div class="history-card">
+
+<h4>2012</h4>
+
+<p>Modernizacja lokalu usługowego.</p>
+
+</div>
+
+</div>
+
+
+<div class="history-item">
+
+<div class="history-dot history-dot-green"></div>
+
+<div class="history-card">
+
+<h4>Dziś</h4>
+
+<p>Gotowy na nowego inwestora i kolejne lata działalności.</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="history-years">
+
+40+
+
+<span>LAT BIZNESU</span>
+
+</div>
+
+
+
+<div class="history-quote">
+
+To miejsce przez dziesięciolecia przyciągało klientów.
+Dziś może stać się fundamentem kolejnej udanej inwestycji.
+
+</div>
+
+</div>
+
+</section>
+
+<!--koniec historii -->
+
+
 <!-- Liczby -->
 <section class="numbers-section py-5">
 
@@ -680,6 +809,30 @@ const observer = new IntersectionObserver((entries) => {
 counters.forEach(counter => observer.observe(counter));
 
 </script>
+
+
+<script>
+
+const historyItems=document.querySelectorAll(".history-item");
+
+const historyObserver=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("visible");
+
+}
+
+});
+
+},{threshold:0.3});
+
+historyItems.forEach(item=>historyObserver.observe(item));
+
+</script>
+
 
 
     </body>
