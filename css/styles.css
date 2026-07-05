@@ -11951,3 +11951,82 @@ display:none;
     }
 
 }
+.owner-section{
+
+    background:#fff;
+
+}
+
+.owner-box{
+
+    max-width:950px;
+    margin:auto;
+
+    display:flex;
+    gap:40px;
+
+    align-items:flex-start;
+
+}
+
+.owner-quote{
+
+    font-size:8rem;
+
+    color:#e5e5e5;
+
+    line-height:1;
+
+    font-family:Georgia,serif;
+
+}
+
+.owner-content h2{
+
+    margin-bottom:30px;
+
+    font-weight:700;
+
+}
+
+.owner-content p{
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+    color:#555;
+
+}
+
+.owner-sign{
+
+    margin-top:35px;
+
+    font-weight:700;
+
+    color:#64a19d;
+
+}
+
+@media(max-width:768px){
+
+.owner-box{
+
+display:block;
+
+}
+
+.owner-quote{
+
+display:none;
+
+}
+
+.owner-content p{
+
+font-size:1.05rem;
+
+}
+
+}
