@@ -11498,3 +11498,44 @@ body {
     margin-bottom:0;
     line-height:1.7;
 }
+/* ===========================
+   Nieruchomość w liczbach
+=========================== */
+
+.numbers-section{
+    background:#fff;
+}
+
+.number-item{
+    padding:15px;
+}
+
+.number-item h1{
+    font-size:4rem;
+    font-weight:800;
+    color:#64a19d;
+    margin-bottom:0;
+    line-height:1;
+}
+
+.number-item span{
+    display:block;
+    font-size:1.05rem;
+    font-weight:600;
+    color:#222;
+    margin-top:8px;
+}
+
+.number-item p{
+    margin-top:10px;
+    color:#777;
+    font-size:.95rem;
+}
+
+@media(max-width:768px){
+
+    .number-item h1{
+        font-size:3rem;
+    }
+
+}
