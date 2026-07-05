@@ -11835,3 +11835,7 @@ display:none;
     font-weight:600;
     line-height:1.6;
 }
+.location-image-link{
+    display:block;
+    margin-top:-80px;
+}
