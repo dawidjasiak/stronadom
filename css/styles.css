@@ -11720,4 +11720,81 @@ display:none;
 }
 
 }
+.location-section{
+    background:#fff;
+}
 
+.location-box h3{
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.location-box p{
+    color:#555;
+    line-height:1.8;
+}
+
+.location-list{
+    list-style:none;
+    padding:0;
+    margin:28px 0;
+}
+
+.location-list li{
+    margin-bottom:14px;
+    font-size:1.05rem;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+}
+
+.location-list i{
+    color:#64a19d;
+    margin-right:12px;
+}
+
+.distance-box{
+    padding:32px;
+    border-radius:22px;
+    background:#f8f9fa;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.distance-box h4{
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.distance-item{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:16px 0;
+    border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.distance-item:last-child{
+    border-bottom:none;
+}
+
+.distance-item strong{
+    color:#64a19d;
+    font-size:1.25rem;
+    white-space:nowrap;
+}
+
+.distance-item span{
+    color:#444;
+    text-align:right;
+}
+
+@media(max-width:768px){
+    .distance-item{
+        flex-direction:column;
+        gap:4px;
+    }
+
+    .distance-item span{
+        text-align:left;
+    }
+}
