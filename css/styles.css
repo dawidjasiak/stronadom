@@ -11739,10 +11739,6 @@ display:none;
     line-height:1.8;
 }
 
-.location-box{
-    padding-top:40px;
-}
-
 .location-list{
     list-style:none;
     padding:0;
@@ -11835,7 +11831,4 @@ display:none;
     font-weight:600;
     line-height:1.6;
 }
-.location-image-link{
-    display:block;
-    margin-top:-80px;
-}
+
