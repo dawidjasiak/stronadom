@@ -11459,3 +11459,42 @@ body {
     font-size:.95rem;
     color:#555;
 }
+/* ===========================
+   Możliwe zastosowania
+=========================== */
+
+.possible-uses{
+    background:#f8f9fa;
+}
+
+.use-card{
+    background:#fff;
+    border-radius:18px;
+    padding:35px 25px;
+    text-align:center;
+    height:100%;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.use-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.use-card i{
+    font-size:46px;
+    color:#64a19d;
+    margin-bottom:20px;
+}
+
+.use-card h4{
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.use-card p{
+    color:#666;
+    margin-bottom:0;
+    line-height:1.7;
+}
