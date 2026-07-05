@@ -11724,7 +11724,6 @@ display:none;
 /* =========================
    lokalizacja miejsca
 ========================= */
-
 .location-section{
     background:#fff;
 }
@@ -11802,36 +11801,4 @@ display:none;
     .distance-item span{
         text-align:left;
     }
-}
-.location-image{
-    width:100%;
-    border-radius:24px;
-    box-shadow:0 20px 45px rgba(0,0,0,.18);
-    transition:.3s;
-}
-
-.location-image:hover{
-    transform:scale(1.02);
-    box-shadow:0 25px 55px rgba(0,0,0,.25);
-}
-
-.location-image-caption{
-    text-align:center;
-    margin-top:12px;
-    color:#777;
-    font-size:.95rem;
-}
-
-.location-note{
-    margin-top:25px;
-    padding:20px 24px;
-    border-left:5px solid #64a19d;
-    background:#f8f9fa;
-    color:#444;
-    font-weight:600;
-    line-height:1.6;
-}
-
-.location-box{
-    padding-top:40px;
 }
