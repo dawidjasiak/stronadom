@@ -11343,3 +11343,17 @@ body {
 .footer {
   padding: 5rem 0;
 }
+@media (max-width: 768px) {
+
+    #mainNav .navbar-brand{
+        font-size: 0.9rem;
+    }
+
+}
+@media (max-width: 768px){
+
+    h2{
+        font-size: 1.8rem;
+    }
+
+}
