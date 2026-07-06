@@ -7,6 +7,95 @@
         font-size:1rem;
     }
 }
+/* ===================================================
+   OPIS SZCZEGÓŁOWY
+=================================================== */
+
+.about-section{
+    padding:100px 0;
+}
+
+.about-lead{
+    max-width:850px;
+    margin:0 auto;
+    font-size:1.2rem;
+    line-height:1.8;
+}
+
+.about-card{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:22px;
+    padding:34px;
+    margin-bottom:28px;
+    color:#fff;
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+}
+
+.about-card h3{
+    color:#fff;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.about-card p{
+    color:rgba(255,255,255,.72);
+    line-height:1.85;
+    margin-bottom:14px;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+}
+
+.about-grid .about-card{
+    margin-bottom:0;
+}
+
+.about-list{
+    columns:2;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.about-list li{
+    color:rgba(255,255,255,.75);
+    margin-bottom:14px;
+    break-inside:avoid;
+}
+
+.about-list li::before{
+    content:"✓";
+    color:#64a19d;
+    font-weight:800;
+    margin-right:10px;
+}
+
+.about-highlight{
+    border-left:6px solid #64a19d;
+}
+
+@media(max-width:768px){
+    .about-section{
+        padding:70px 0;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-card{
+        padding:26px 22px;
+    }
+
+    .about-list{
+        columns:1;
+    }
+}
+
 
 /* ===================================================
    PODSUMOWANIE 60 SEKUND
