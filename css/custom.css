@@ -14,7 +14,7 @@
 
 .intro-premium-section{
     background:#fff;
-    padding:110px 0 95px;
+    padding:180px 0 95px;
     position:relative;
     overflow:hidden;
 }
@@ -29,15 +29,16 @@
 .intro-year{
     position:absolute;
     left:50%;
-    top:-85px;
+    top:20px;
     transform:translateX(-50%);
     font-size:9rem;
     font-weight:900;
     letter-spacing:.08em;
-    color:rgba(100,161,157,.08);
+    color:rgba(100,161,157,.06);
     line-height:1;
     user-select:none;
     pointer-events:none;
+    z-index:0;
 }
 
 .intro-label{
@@ -108,7 +109,7 @@
     pointer-events:none;
     z-index:0;
     }
-    
+
     .intro-label,
     .intro-premium h2,
     .intro-line,
