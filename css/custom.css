@@ -137,6 +137,17 @@
     padding-bottom:0;
 }
 
+.about-buttons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.about-buttons .btn{
+    padding:15px 28px;
+}
+
 @media(max-width:768px){
     .about-section-light{
         padding:70px 0;
