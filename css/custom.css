@@ -8,94 +8,157 @@
     }
 }
 /* ===================================================
-   OPIS SZCZEGÓŁOWY
+   OPIS SZCZEGÓŁOWY — WERSJA JASNA / PROSPEKT
 =================================================== */
 
-.about-section{
-    padding:100px 0;
+.about-section-light{
+    background:#f7f7f7;
+    padding:110px 0;
 }
 
-.about-lead{
-    max-width:850px;
+.about-paper{
+    max-width:980px;
     margin:0 auto;
-    font-size:1.2rem;
-    line-height:1.8;
+    background:#fff;
+    padding:70px 80px;
+    border-radius:4px;
+    box-shadow:0 30px 80px rgba(0,0,0,.08);
 }
 
-.about-card{
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:22px;
-    padding:34px;
-    margin-bottom:28px;
-    color:#fff;
-    box-shadow:0 15px 35px rgba(0,0,0,.18);
+.about-paper-header{
+    text-align:center;
+    padding-bottom:45px;
+    border-bottom:1px solid rgba(0,0,0,.12);
 }
 
-.about-card h3{
-    color:#fff;
-    font-weight:700;
+.about-paper-header span{
+    display:block;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:.75rem;
+    font-weight:800;
+    color:#64a19d;
     margin-bottom:18px;
 }
 
-.about-card p{
-    color:rgba(255,255,255,.72);
-    line-height:1.85;
-    margin-bottom:14px;
+.about-paper-header h2{
+    font-size:2.4rem;
+    font-weight:800;
+    color:#111827;
+    margin-bottom:22px;
 }
 
-.about-grid{
+.about-paper-header p{
+    max-width:760px;
+    margin:0 auto;
+    color:#555;
+    line-height:1.9;
+    font-size:1.12rem;
+}
+
+.about-chapter{
+    padding:42px 0;
+    border-bottom:1px solid rgba(0,0,0,.1);
+}
+
+.about-chapter h3{
+    position:relative;
+    padding-left:18px;
+    margin-bottom:24px;
+    font-weight:800;
+    color:#111827;
+}
+
+.about-chapter h3::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:5px;
+    width:4px;
+    height:28px;
+    background:#64a19d;
+}
+
+.about-chapter h4{
+    font-weight:800;
+    color:#111827;
+    margin-bottom:12px;
+}
+
+.about-chapter p{
+    color:#4b5563;
+    line-height:1.95;
+    margin-bottom:16px;
+}
+
+.about-chapter strong{
+    color:#111827;
+}
+
+.floor-row{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:80px 1fr;
     gap:28px;
+    padding:28px 0;
+    border-bottom:1px solid rgba(0,0,0,.08);
 }
 
-.about-grid .about-card{
-    margin-bottom:0;
+.floor-row:last-child{
+    border-bottom:none;
 }
 
-.about-list{
-    columns:2;
-    list-style:none;
-    padding:0;
-    margin:0;
+.floor-number{
+    font-size:2.4rem;
+    font-weight:900;
+    color:rgba(100,161,157,.28);
+    line-height:1;
 }
 
-.about-list li{
-    color:rgba(255,255,255,.75);
-    margin-bottom:14px;
-    break-inside:avoid;
+.about-lines{
+    border-top:1px solid rgba(0,0,0,.1);
 }
 
-.about-list li::before{
+.about-lines div{
+    padding:16px 0;
+    border-bottom:1px solid rgba(0,0,0,.08);
+    color:#4b5563;
+    line-height:1.7;
+}
+
+.about-lines div::before{
     content:"✓";
     color:#64a19d;
-    font-weight:800;
-    margin-right:10px;
+    font-weight:900;
+    margin-right:12px;
 }
 
-.about-highlight{
-    border-left:6px solid #64a19d;
+.about-final{
+    border-bottom:none;
+    padding-bottom:0;
 }
 
 @media(max-width:768px){
-    .about-section{
+    .about-section-light{
         padding:70px 0;
     }
 
-    .about-grid{
+    .about-paper{
+        padding:42px 26px;
+    }
+
+    .about-paper-header h2{
+        font-size:2rem;
+    }
+
+    .floor-row{
         grid-template-columns:1fr;
+        gap:8px;
     }
 
-    .about-card{
-        padding:26px 22px;
-    }
-
-    .about-list{
-        columns:1;
+    .floor-number{
+        font-size:2rem;
     }
 }
-
 
 /* ===================================================
    PODSUMOWANIE 60 SEKUND
