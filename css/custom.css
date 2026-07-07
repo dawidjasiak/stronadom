@@ -11,110 +11,90 @@
    OPIS SZCZEGÓŁOWY
 =================================================== */
 
-.about-document{
-    max-width:950px;
-    margin:0 auto;
-    color:#fff;
+.about-section{
+    padding:100px 0;
 }
 
-.about-document h2{
-    font-weight:800;
-    color:#fff;
-}
-
-.about-intro{
-    max-width:780px;
+.about-lead{
+    max-width:850px;
     margin:0 auto;
-    color:rgba(255,255,255,.7);
     font-size:1.2rem;
     line-height:1.8;
 }
 
-.about-block{
-    padding:34px 0;
-    border-bottom:1px solid rgba(255,255,255,.14);
-}
-
-.about-block h3{
-    position:relative;
-    padding-left:18px;
-    margin-bottom:22px;
+.about-card{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:22px;
+    padding:34px;
+    margin-bottom:28px;
     color:#fff;
-    font-weight:800;
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
 }
 
-.about-block h3::before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:4px;
-    width:5px;
-    height:28px;
-    background:#64a19d;
-    border-radius:6px;
-}
-
-.about-block h4{
-    margin-top:28px;
-    margin-bottom:12px;
+.about-card h3{
     color:#fff;
     font-weight:700;
-    font-size:1.15rem;
+    margin-bottom:18px;
 }
 
-.about-block p{
-    color:rgba(255,255,255,.68);
-    line-height:1.9;
+.about-card p{
+    color:rgba(255,255,255,.72);
+    line-height:1.85;
     margin-bottom:14px;
 }
 
-.about-block strong{
-    color:#fff;
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
 }
 
-.about-clean-list{
+.about-grid .about-card{
+    margin-bottom:0;
+}
+
+.about-list{
+    columns:2;
     list-style:none;
     padding:0;
     margin:0;
-    columns:2;
 }
 
-.about-clean-list li{
-    color:rgba(255,255,255,.72);
+.about-list li{
+    color:rgba(255,255,255,.75);
     margin-bottom:14px;
     break-inside:avoid;
-    line-height:1.6;
 }
 
-.about-clean-list li::before{
+.about-list li::before{
     content:"✓";
     color:#64a19d;
     font-weight:800;
     margin-right:10px;
 }
 
-.about-summary-block{
-    border-bottom:none;
-    margin-top:10px;
-    padding:36px 34px;
+.about-highlight{
     border-left:6px solid #64a19d;
-    background:rgba(255,255,255,.06);
-    border-radius:18px;
 }
 
-/*@media(max-width:768px){
-    .about-intro{
-        font-size:1.05rem;
+@media(max-width:768px){
+    .about-section{
+        padding:70px 0;
     }
 
-    .about-clean-list{
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-card{
+        padding:26px 22px;
+    }
+
+    .about-list{
         columns:1;
     }
-
-    .about-summary-block{
-        padding:28px 22px;
-    }
-}*/
+}
 
 
 /* ===================================================
