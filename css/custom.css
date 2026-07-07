@@ -7,6 +7,117 @@
         font-size:1rem;
     }
 }
+
+/* ===================================================
+   WSTĘP PREMIUM
+=================================================== */
+
+.intro-premium-section{
+    background:#fff;
+    padding:110px 0 95px;
+    position:relative;
+    overflow:hidden;
+}
+
+.intro-premium{
+    max-width:980px;
+    margin:0 auto;
+    text-align:center;
+    position:relative;
+}
+
+.intro-year{
+    position:absolute;
+    left:50%;
+    top:-85px;
+    transform:translateX(-50%);
+    font-size:9rem;
+    font-weight:900;
+    letter-spacing:.08em;
+    color:rgba(100,161,157,.08);
+    line-height:1;
+    user-select:none;
+    pointer-events:none;
+}
+
+.intro-label{
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:.8rem;
+    font-weight:800;
+    color:#64a19d;
+    margin-bottom:18px;
+}
+
+.intro-premium h2{
+    font-size:2.8rem;
+    font-weight:900;
+    line-height:1.18;
+    color:#111827;
+    margin-bottom:26px;
+}
+
+.intro-line{
+    width:90px;
+    height:3px;
+    background:#64a19d;
+    margin:0 auto 45px;
+    border-radius:999px;
+}
+
+.intro-text{
+    max-width:850px;
+    margin:0 auto;
+    text-align:left;
+}
+
+.intro-text p{
+    color:#4b5563;
+    line-height:1.95;
+    font-size:1.08rem;
+    margin-bottom:28px;
+}
+
+.intro-text .lead{
+    font-size:1.22rem;
+    color:#374151;
+    font-weight:400;
+}
+
+.intro-text strong{
+    color:#111827;
+    font-weight:800;
+}
+
+@media(max-width:768px){
+    .intro-premium-section{
+        padding:80px 0 65px;
+    }
+
+    .intro-year{
+        font-size:4.8rem;
+        top:-42px;
+    }
+
+    .intro-premium h2{
+        font-size:2rem;
+    }
+
+    .intro-text{
+        text-align:left;
+    }
+
+    .intro-text p{
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+    .intro-text .lead{
+        font-size:1.08rem;
+    }
+}
+
+
 /* ===================================================
    OPIS SZCZEGÓŁOWY — WERSJA JASNA / PROSPEKT
 =================================================== */
