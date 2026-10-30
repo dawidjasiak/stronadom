@@ -333,3 +333,117 @@
     font-weight:800;
     margin-right:12px;
 }
+
+/* Tło popupu */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 20, 20, 0.65);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Okno popupu */
+.popup-box {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    padding: 48px 38px;
+    background: #fff;
+    color: #222;
+    text-align: center;
+    border-top: 4px solid #64a19d;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.2);
+    animation: popup-appear 0.35s ease-out;
+}
+
+/* Mały nagłówek */
+.popup-eyebrow {
+    margin-bottom: 14px;
+    color: #64a19d;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+/* Tytuł */
+.popup-box h2 {
+    margin-bottom: 18px;
+    font-size: clamp(24px, 4vw, 32px);
+    line-height: 1.25;
+    font-weight: 500;
+}
+
+/* Treść */
+.popup-box p:not(.popup-eyebrow) {
+    margin-bottom: 26px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Przycisk kontaktu */
+.popup-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #64a19d;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background 0.25s ease;
+}
+
+.popup-button:hover {
+    background: #4f8581;
+    color: #fff;
+}
+
+/* Przycisk zamknięcia */
+.popup-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #555;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.popup-close:hover {
+    color: #64a19d;
+}
+
+/* Animacja */
+@keyframes popup-appear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Telefony */
+@media (max-width: 576px) {
+    .popup-box {
+        padding: 42px 24px 30px;
+    }
+}
+
+/* Ukrycie popupu */
+.popup-overlay.popup-hidden {
+    display: none;
+}

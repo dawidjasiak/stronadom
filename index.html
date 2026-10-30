@@ -61,32 +61,8 @@
                 </div>
             </div>
         </nav>
-```html
-<!-- Popup powitalny -->
-<div id="welcome-popup" class="popup-overlay">
-    <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="popup-title">
 
-        <button class="popup-close" id="popup-close" aria-label="Zamknij popup">
-            &times;
-        </button>
 
-        <p class="popup-eyebrow">GLADBECK4SALE</p>
-
-        <h2 id="popup-title">Szukasz nieruchomości z potencjałem?</h2>
-
-        <p>
-            Poznaj nieruchomość przy ul. Gladbeck 4 w Wodzisławiu Śląskim.
-            Sprawdź jej możliwości i umów się na prezentację.
-            Informujemy, że strona ciągle jest w budowie, a zdjęcia będą dodawane na bieżąco.
-        </p>
-
-        <a href="#contact" class="popup-button" id="popup-contact">
-            Umów prezentację
-        </a>
-
-    </div>
-</div>
-```
 <!-- Wstęp -->
 <section class="intro-premium-section" id="intro">
     <div class="container px-4 px-lg-5">
@@ -1232,7 +1208,61 @@ historyItems.forEach(item=>historyObserver.observe(item));
 
 </script>
 
+<!-- Popup powitalny -->
+<div id="welcome-popup" class="popup-overlay">
+    <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="popup-title">
 
+        <button class="popup-close" id="popup-close" aria-label="Zamknij popup">
+            &times;
+        </button>
+
+        <p class="popup-eyebrow">GLADBECK4SALE</p>
+
+        <h2 id="popup-title">Szukasz nieruchomości z potencjałem?</h2>
+
+        <p>
+            Poznaj nieruchomość przy ul. Gladbeck 4 w Wodzisławiu Śląskim.
+            Sprawdź jej możliwości i umów się na prezentację.
+            Informujemy, że strona ciągle jest w budowie, a zdjęcia będą dodawane na bieżąco.
+        </p>
+
+        <a href="#contact" class="popup-button" id="popup-contact">
+            Umów prezentację
+        </a>
+
+    </div>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("welcome-popup");
+    const closeButton = document.getElementById("popup-close");
+    const contactButton = document.getElementById("popup-contact");
+
+    if (!popup || !closeButton || !contactButton) return;
+
+    function closePopup() {
+        popup.classList.add("popup-hidden");
+    }
+
+    closeButton.addEventListener("click", closePopup);
+
+    popup.addEventListener("click", function (event) {
+        if (event.target === popup) {
+            closePopup();
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closePopup();
+        }
+    });
+
+    contactButton.addEventListener("click", closePopup);
+});
+</script>
 
     </body>
 </html>
