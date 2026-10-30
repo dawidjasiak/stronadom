@@ -334,116 +334,87 @@
     margin-right:12px;
 }
 
-/* Tło popupu */
-.popup-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 99999;
+
+/* GLADBECK4SALE — POPUP MODALNY */
+
+#welcome-popup {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 999999 !important;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+
     padding: 20px;
-    background: rgba(15, 20, 20, 0.65);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    box-sizing: border-box;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    opacity: 1;
+    visibility: visible;
 }
 
-/* Okno popupu */
-.popup-box {
+/* Okno na środku */
+#welcome-popup .popup-box {
     position: relative;
     width: 100%;
     max-width: 520px;
-    padding: 48px 38px;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    margin: auto;
+    padding: 45px 35px;
+
     background: #fff;
     color: #222;
+
     text-align: center;
     border-top: 4px solid #64a19d;
-    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.2);
-    animation: popup-appear 0.35s ease-out;
+
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
 }
 
-/* Mały nagłówek */
-.popup-eyebrow {
-    margin-bottom: 14px;
-    color: #64a19d;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 3px;
-}
-
-/* Tytuł */
-.popup-box h2 {
-    margin-bottom: 18px;
-    font-size: clamp(24px, 4vw, 32px);
-    line-height: 1.25;
-    font-weight: 500;
-}
-
-/* Treść */
-.popup-box p:not(.popup-eyebrow) {
-    margin-bottom: 26px;
-    font-size: 15px;
-    line-height: 1.8;
-    color: #555;
-}
-
-/* Przycisk kontaktu */
-.popup-button {
-    display: inline-block;
-    padding: 14px 28px;
-    background: #64a19d;
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: background 0.25s ease;
-}
-
-.popup-button:hover {
-    background: #4f8581;
-    color: #fff;
-}
-
-/* Przycisk zamknięcia */
-.popup-close {
+/* Zamknięcie */
+#welcome-popup .popup-close {
     position: absolute;
     top: 12px;
     right: 16px;
-    padding: 0;
-    border: 0;
+
+    border: none;
     background: transparent;
-    color: #555;
+
     font-size: 32px;
-    line-height: 1;
+    color: #555;
     cursor: pointer;
 }
 
-.popup-close:hover {
-    color: #64a19d;
+/* Przycisk */
+#welcome-popup .popup-button {
+    display: inline-block;
+    padding: 14px 25px;
+
+    background: #64a19d;
+    color: #fff;
+
+    text-decoration: none;
+    cursor: pointer;
 }
 
-/* Animacja */
-@keyframes popup-appear {
-    from {
-        opacity: 0;
-        transform: translateY(12px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Ukrywanie popupu */
+#welcome-popup.popup-hidden {
+    display: none !important;
 }
 
-/* Telefony */
+/* Telefon */
 @media (max-width: 576px) {
-    .popup-box {
-        padding: 42px 24px 30px;
+    #welcome-popup .popup-box {
+        padding: 40px 22px 28px;
     }
 }
 
-/* Ukrycie popupu */
-.popup-overlay.popup-hidden {
-    display: none;
-}

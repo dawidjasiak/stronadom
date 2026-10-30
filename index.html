@@ -1234,19 +1234,26 @@ historyItems.forEach(item=>historyObserver.observe(item));
 </div>
 
 
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const popup = document.getElementById("welcome-popup");
+
+    if (!popup) return;
+
     const closeButton = document.getElementById("popup-close");
     const contactButton = document.getElementById("popup-contact");
 
-    if (!popup || !closeButton || !contactButton) return;
-
     function closePopup() {
         popup.classList.add("popup-hidden");
+        document.body.style.overflow = "";
     }
 
-    closeButton.addEventListener("click", closePopup);
+    document.body.style.overflow = "hidden";
+
+    if (closeButton) {
+        closeButton.addEventListener("click", closePopup);
+    }
 
     popup.addEventListener("click", function (event) {
         if (event.target === popup) {
@@ -1255,12 +1262,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
+        if (event.key === "Escape" && !popup.classList.contains("popup-hidden")) {
             closePopup();
         }
     });
 
-    contactButton.addEventListener("click", closePopup);
+    if (contactButton) {
+        contactButton.addEventListener("click", function () {
+            closePopup();
+        });
+    }
 });
 </script>
 
